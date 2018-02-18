@@ -1,0 +1,12 @@
+0.  it is the longest word in the dictionary provided, containing 45 characters.
+1.  int getrusage(int who, struct rusage *usage);
+    getrusage() returns resource usage measures for "who", which can be one of the following:
+    RUSAGE_SELF , RUSAGE_CHILDREN or RUSAGE_THREAD
+2.  16
+3.  C requires passing structs by reference in functions. The size is too big to pass it by value.
+4.  It reads words from the file, character by character, using a for loop and begins by reading the first character of the file, incrementing by one character until it reaches 
+    the end of the file. If the character is a letter or apostrophe, it is added to a word. If the word becomes larger than what we have defined as the largest word possible, 
+    the word is ignored. If the word has a digit, it is ignored as well. If a word still exists, it is counted and checked for spelling. The amount of time it takes to complete
+    the checking is updated in time_check. If it is misspelled then print word.
+5.  So that we can account numerical inputs and other special characters which were invalid.
+6.  Since LENGTH and DICTIONARY are declared in the top as constants and we know that word is array of length 'LENGTH+1', so it needs to be declared as const. 

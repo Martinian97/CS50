@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    HISTORY
+{% endblock %}
+
+{% block main %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+#t01 th {
+    background-color: black;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<table id="t01">
+<caption>ALL TRANSACTIONS</caption>    
+    <tr>
+        <th>Type</th>
+        <th>Symbol</th>
+        <th>Shares</th>
+        <th>Price</th>
+        <th>Transacted</th>
+    </tr>
+    {% for row in menu %}
+        <tr>
+            <td>{{row["type"]}}</td>
+            <td>{{row["symbol"]}}</td>
+            <td>{{row["shares"]}}</td>
+            <td>{{row["price"]}}</td>
+            <td>{{row["datetime"]}}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

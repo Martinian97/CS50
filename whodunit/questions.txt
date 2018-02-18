@@ -1,0 +1,14 @@
+1.  stdint.h is a header file to allow programmers to write more portable code by providing a set of typedefs that specify exact-width integer types,
+    together with the defined minimum and maximum allowable values for each type, using macros.
+2.  These are data types which are essentially aliases for C/C++ primitive data types. They are all unsigned integers, so their first bit is not reserved for signing.
+3.  1,4,4,2 bytes respectively.
+4.  The first 2 bytes of the BMP file format are the character "B" then the character "M" in ASCII encoding.
+5.  bfSize is the size, in bytes, of the bitmap file whereas biSize is the number of bytes required by the structure.
+6.  If biHeight is negative, the bitmap is a top-down DIB and its origin is the upper-left corner. Top-down DIBs cannot be compressed.    
+7.  biBitCount
+8.  It is possible you open more files than your OS allows. It means that the file might not exist or some permission error occurred while accessing a file such as 
+    "Read-Only" or "Write-Protected", so in those cases fopen will return 0 (a NULL pointer).
+9.  Beacuse we only need to read 1 element from the input file where each element is the size of the struct.
+10. 3 
+11. It's a file position indicator so that we can keep a track as to where we are in the file, like a cursor. If we lose track, then we can call this function.
+12. Current position in the file. It is the third argument in fseek function.
